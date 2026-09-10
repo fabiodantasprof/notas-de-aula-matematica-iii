@@ -1,0 +1,84 @@
+% Importação de pacotes
+
+\usepackage[T1]{fontenc}        % Pacote para usar tabela ASCII
+\usepackage[utf8]{inputenc}     % Pacote para usar Unicode
+\usepackage[portuguese]{babel}      % Seta o idioma para pt-BR
+
+\usepackage{geometry}           % Controlar as margens da página
+\geometry{top=30mm,bottom=20mm,left=30mm,right=20mm}  
+
+
+%AJUSTE DO IDIOMA
+\usepackage[utf8]{inputenc} %uso de ACENTOS
+\usepackage[portuguese]{babel} % IDIOMA do documento
+\usepackage[T1]{fontenc} % hifenização de pacotes acentuados
+
+%PACOTES GERAIS
+\usepackage{graphicx}               %habilita o uso de FIGURAS
+\graphicspath{{./img/}}         %procura figuras na subpasta indicada
+\usepackage[shortlabels]{enumitem}  %Permite mudar a forma de enumerar
+\usepackage{multirow}       % Mesclar células na vertical
+\usepackage{geometry}       % Controlar as margens da página
+\usepackage{amsmath}        % macros de matemática, como dfrac{}{}
+\usepackage{amssymb}        % símbolos matemáticos
+\usepackage{wrapfig}        % Figuras junto de texto
+\usepackage{tikz}           % Figuras tikz
+\usepackage{comment}        % Ambiente de comentário
+\usepackage{lastpage}       % Uso da macro LastPage para numerar a página
+\usepackage{fancyhdr}       % Cabeçalho personalizado
+\usepackage{fancybox}
+
+
+%AJUSTE DAS FUNÇÕES TRIGONOMÉTRICAS
+\providecommand{\sin}{} \renewcommand{\sin}{\mathrm{sen\,}}
+\providecommand{\tan}{} \renewcommand{\tan}{\mathrm{tan\,}}
+\providecommand{\cos}{} \renewcommand{\cos}{\mathrm{cos\,}}
+
+
+
+
+\usepackage[sorting=nty, style=abnt,natbib=true, backend=biber]{biblatex}    % Importa o pacote bibTeX para a bibliografia
+\addbibresource{main.bib}                                           % Importa o arquivo que contém a bibliografia
+
+ % Hiperlinks no documento
+\usepackage{hyperref}          
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black,
+	filecolor=magenta,      
+	urlcolor=black,
+	citecolor=black,
+}
+\urlstyle{same}
+
+
+\usepackage[dvipsnames]{xcolor} %uso de cores no texto, \color{cor} dentro de um bloco para colorir ele. 
+%\definecolor{mypink2}{RGB}{219, 48, 122}
+%pagecolor{cor}
+
+
+\usepackage{enumitem}           % Permite personalizar o enumerate
+
+\usepackage{setspace}           % Espaçamento entre linhas
+
+% Macros de Título, Autor e Data
+\title{Notas de Aula\\Matemática I}
+\author{Fábio Dantas}
+\date{\today}
+
+
+% Ambiente de citação
+\renewenvironment{quotation}
+  {\small\list{}{\rightmargin=0.1cm \leftmargin=4cm \topsep=1.5\baselineskip}%
+   \item\relax}
+  {\endlist}
+
+\def\signed #1{{\leavevmode\unskip\nobreak\newline
+  \hbox{}\nobreak #1 %
+  \hfil\parfillskip=0pt \finalhyphendemerits=0 \endgraf}}
+
+\newsavebox\mybox
+\newenvironment{citacao}[1]
+  {\savebox\mybox{#1}\begin{quotation}}
+  {\signed{\usebox\mybox}\end{quotation}}
+
