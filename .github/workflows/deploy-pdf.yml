@@ -5,7 +5,6 @@ on:
     branches:
       - main
 
-# Permissões necessárias para publicar no GitHub Pages
 permissions:
   contents: read
   pages: write
@@ -23,16 +22,15 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      - name: Baixar repositório
+      - name: Baixar repositorio
         uses: actions/checkout@v4
 
       - name: Configurar GitHub Pages
         uses: actions/configure-pages@v5
 
-      - name: Compactar arquivos para deploy
+      - name: Preparar artefato do GitHub Pages
         uses: actions/upload-pages-artifact@v3
         with:
-          # Envia o conteúdo da raiz do repositório
           path: '.'
 
       - name: Fazer Deploy no GitHub Pages
