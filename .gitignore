@@ -12,6 +12,11 @@
 *.cb2
 .*.lb
 
+##Arquivos auxiliares
+*.sh
+*.bat
+*.xml
+
 ## Intermediate documents:
 *.dvi
 *.xdv
