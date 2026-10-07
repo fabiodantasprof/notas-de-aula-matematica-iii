@@ -1,9 +1,3 @@
-% Importação de pacotes
-
-\usepackage[T1]{fontenc}        % Pacote para usar tabela ASCII
-\usepackage[utf8]{inputenc}     % Pacote para usar Unicode
-\usepackage[portuguese]{babel}      % Seta o idioma para pt-BR
-
 \usepackage{geometry}           % Controlar as margens da página
 \geometry{top=30mm,bottom=20mm,left=30mm,right=20mm}  
 
@@ -28,13 +22,13 @@
 \usepackage{fancyhdr}       % Cabeçalho personalizado
 \usepackage{fancybox}
 
+\usepackage{pdfpages}		% Incluir capa em PDF
+\usepackage[Bjornstrup]{fncychap}	% Capítulo personalizado
 
 %AJUSTE DAS FUNÇÕES TRIGONOMÉTRICAS
 \providecommand{\sin}{} \renewcommand{\sin}{\mathrm{sen\,}}
 \providecommand{\tan}{} \renewcommand{\tan}{\mathrm{tan\,}}
 \providecommand{\cos}{} \renewcommand{\cos}{\mathrm{cos\,}}
-
-
 
 
 \usepackage[sorting=nty, style=abnt,natbib=true, backend=biber]{biblatex}    % Importa o pacote bibTeX para a bibliografia
@@ -55,9 +49,6 @@
 \usepackage[dvipsnames]{xcolor} %uso de cores no texto, \color{cor} dentro de um bloco para colorir ele. 
 %\definecolor{mypink2}{RGB}{219, 48, 122}
 %pagecolor{cor}
-
-
-\usepackage{enumitem}           % Permite personalizar o enumerate
 
 \usepackage{setspace}           % Espaçamento entre linhas
 
